@@ -1,0 +1,29 @@
+{
+  "name": "tns-astro-site-search",
+  "version": "1.0.0",
+  "description": "Astro site search using Fuse.js and Qwik",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@astrojs/mdx": "^2.1.1",
+    "@astrojs/tailwind": "^5.1.0",
+    "@builder.io/qwik": "^1.4.5",
+    "@qwikdev/astro": "^0.5.7",
+    "astro": "^4.4.4",
+    "fuse.js": "^7.0.0",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10"
+  }
+}
