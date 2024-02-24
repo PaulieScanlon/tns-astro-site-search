@@ -1,6 +1,6 @@
 import { getCollection } from 'astro:content';
 
-export const GET = async ({ params, request }) => {
+export const GET = async () => {
   const posts = await getCollection('posts');
   const articles = await getCollection('articles');
 

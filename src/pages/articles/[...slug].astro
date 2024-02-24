@@ -16,5 +16,7 @@ const { Content } = await entry.render();
 ---
 
 <Layout>
+  <h1>{entry.data.title}</h1>
   <Content />
+  <a href={entry.data.url} target='_blank' rel='noopener'>Read Article</a>
 </Layout>

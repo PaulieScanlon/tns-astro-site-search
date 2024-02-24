@@ -1,10 +1,18 @@
+---
+import Header from '../components/header';
+
+const content = await fetch(`${import.meta.env.SITE}/all-content.json`);
+const { search } = await content.json();
+---
+
 <html lang='en'>
   <head>
     <meta charset='utf-8' />
     <title>Site Search</title>
   </head>
   <body>
-    <main class='prose mx-auto max-w-3xl'>
+    <Header search={search} />
+    <main class='prose mx-auto max-w-3xl p-4'>
       <main>
         <slot />
       </main>
