@@ -1,7 +1,19 @@
 ---
 import Layout from '../layouts/layout.astro';
+
+let search = null;
+
+try {
+  const content = await fetch(
+    `${import.meta.env.PROD ? 'https://tns-astro-site-search.netlify.app/' : 'http://localhost:4321/'}all-content.json`
+  );
+  search = await content.json();
+} catch (error) {
+  console.error(error);
+}
 ---
 
 <Layout>
   <h1>Index</h1>
+  <pre>{JSON.stringify(search, null, 2)}</pre>
 </Layout>
