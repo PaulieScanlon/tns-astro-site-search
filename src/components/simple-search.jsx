@@ -5,12 +5,12 @@ const Search = component$(({ data }) => {
   const filtered = useSignal(data);
 
   const handleInput = $(async (event) => {
-    const FuseModule = await import('fuse.js');
-    const Fuse = FuseModule.default;
-
     const {
       target: { value },
     } = event;
+
+    const FuseModule = await import('fuse.js');
+    const Fuse = FuseModule.default;
 
     const fuse = new Fuse(all.value, {
       threshold: 0.5,
