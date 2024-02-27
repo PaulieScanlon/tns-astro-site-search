@@ -1,0 +1,10 @@
+---
+import SimpleSearch from '../components/simple-search';
+
+const content = await fetch(
+  `${import.meta.env.PROD ? 'https://tns-astro-site-search.netlify.app' : 'http://localhost:4321'}/all-content.json`
+);
+const { search } = await content.json();
+---
+
+<SimpleSearch data={search} />
