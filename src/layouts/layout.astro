@@ -1,5 +1,5 @@
 ---
-import Header from '../components/header';
+import Search from '../components/search';
 
 const content = await fetch(`${import.meta.env.SITE}/all-content.json`);
 const { search } = await content.json();
@@ -11,11 +11,16 @@ const { search } = await content.json();
     <title>Site Search</title>
   </head>
   <body>
-    <Header search={search} />
+    <header class='p-4 bg-white shadow'>
+      <div class='flex items-center justify-between'>
+        <a href='/'>
+          <strong>Lorem</strong>
+        </a>
+        <Search data={search} />
+      </div>
+    </header>
     <main class='prose mx-auto max-w-3xl p-4'>
-      <main>
-        <slot />
-      </main>
+      <slot />
     </main>
   </body>
 </html>
