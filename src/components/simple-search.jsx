@@ -39,7 +39,7 @@ const Search = component$(({ data }) => {
 
   return (
     <div>
-      <input id='input' type='text' placeholder='Search' onInput$={handleInput} />
+      <input type='text' placeholder='Search' onInput$={handleInput} />
       <ul>
         {filtered.value.length > 0
           ? filtered.value.map((data, index) => {
